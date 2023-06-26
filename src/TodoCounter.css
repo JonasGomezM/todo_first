@@ -1,0 +1,14 @@
+.counter {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  background-color: blueviolet;
+  padding: 20px;
+  font-weight: 100;
+}
+
+span {
+  font-weight: bolder;
+}

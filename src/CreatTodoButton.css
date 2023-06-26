@@ -1,0 +1,20 @@
+.btn {
+  background-color:  greenyellow;
+  color: blueviolet;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bolder;
+
+  transition: background-color 0.5s linear;
+}
+
+.btn:hover {
+  box-shadow: 0px 5px 16px -3px rgba(0,0,0,0.61);
+  background-color:  rgb(234, 0, 255);
+  color: white;
+}
