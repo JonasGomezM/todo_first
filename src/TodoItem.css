@@ -1,22 +1,13 @@
 .listas {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px;
   list-style: none;
   background-color: blueviolet;
   margin-bottom: 20px;
   color: white;
-}
-
-.completed {
-  color: rgb(209, 209, 209);
   font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.cp__active {
-  color: greenyellow;
 }
 
 .task {
@@ -25,22 +16,4 @@
 
 .cp__active--task {
   Text-decoration: line-through;
-}
-
-.delete {
-  position: relative;
-  font-size: 15px;
-  padding: 5px 7px;
-  border-radius: 1000px;
-  background-color: greenyellow;
-  top: -70px;
-  left: 120px;
-  color: rgb(95, 95, 95);
-  font-weight: bolder;
-}
-
-.delete:hover {
-  background-color: rgb(255, 0, 0);
-  color: white;
-  cursor: pointer;
 }

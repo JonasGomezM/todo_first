@@ -1,0 +1,25 @@
+.IconSVG{
+  width: 20px;
+  height: 20px;
+}
+
+.completed {
+  cursor: pointer;
+}
+
+.delete {
+  fill: rgb(175, 175, 175);
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: rgb(255, 0, 0);
+}
+
+.delete:hover .IconSVG{
+  fill: rgb(255, 0, 0);
+}
+
+.completed:hover .IconSVG{
+  fill: #06e706;
+}

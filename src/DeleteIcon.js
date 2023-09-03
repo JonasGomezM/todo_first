@@ -1,11 +1,11 @@
 import React from 'react';
 import { TodoIcon } from './TodoIcon.js';
 
-function DeleteIcon(){
+function DeleteIcon({onDelete}){
   return (
     <TodoIcon 
     type="delete"
-    color="red"
+    checkOK_del={onDelete}
   />
   );
 }

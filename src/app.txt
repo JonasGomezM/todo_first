@@ -20,31 +20,20 @@ const todoDefaults = [
 //console.log(localStorage.getItem('V1'))
 
 
-//CUSTOM HOOKS LOCALSTORAGE
-function useLocalStorage(itemName, initialValue) {
-  const localStorageItem = localStorage.getItem(itemName);
-  let parsedItem;
-  if (!localStorageItem) {
-    localStorage.setItem(itemName, JSON.stringify(initialValue));
-    parsedItem = initialValue;
-  } else {
-    parsedItem = JSON.parse(localStorageItem);
-  }
-
-  const [item, setItem] = React.useState(parsedItem);
-
-  const saveItem = newItem => {
-    localStorage.setItem(itemName, JSON.stringify(newItem));
-    setItem(newItem);
-  };
-
-  return [item, saveItem];
-}
 
 function App() {
-  
+  const todosLocalStorage = localStorage.getItem('V1')
 
-  const [todos, saveTodos] = useLocalStorage('V1', []);
+  let obt;
+
+  if(!todosLocalStorage) {
+    localStorage.setItem('V1', JSON.stringify([]));
+    obt = [];
+  }else {
+    obt = JSON.parse(todosLocalStorage);
+  }
+
+  const [todos, setTodos] = React.useState(obt);
   const [searchValue, setSearchValue] = React.useState('');
   //console.log(`funciona y estas buscando ${searchValue}`);
 
@@ -56,6 +45,11 @@ function App() {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText);
   });
+
+  let saveTodos=(newTodos)=>{
+    localStorage.setItem('V1', JSON.stringify(newTodos))
+    setTodos(newTodos)
+  }
 
   const completeTodo = (text) => {
     const newTodos = [...todos];
