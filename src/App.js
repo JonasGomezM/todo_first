@@ -1,17 +1,17 @@
 import React, { Fragment } from 'react';
-import { TodoCounter } from './TodoCounter.js';
-import { TodoSearch } from './TodoSearch.js';
-import { TodoList } from './TodoList.js';
-import { TodoItem } from './TodoItem.js';
-import { CreatTodoButton } from './CreatTodoButton.js';
+import { TodoCounter } from './TodoCounter/index.js';
+import { TodoSearch } from './TodoSearch/index.js';
+import { TodoList } from './TodoList/index.js';
+import { TodoItem } from './TodoItem/index.js';
+import { CreatTodoButton } from './CreatTodoButton/index.js';
 import './App.css';
 
-const todoDefaults = [
-  { text: 'Create a taskkk', completed: false },
-  { text: 'Task deleted', completed: false },
-  { text: 'Task completed', completed: false },
-  { text: 'Task complete', completed: false }
-];
+// const todoDefaults = [
+//   { text: 'Create a taskkk', completed: false },
+//   { text: 'Task deleted', completed: false },
+//   { text: 'Task completed', completed: false },
+//   { text: 'Task complete', completed: false }
+// ];
 
 //localStorage.setItem('TODOS_V1', todoDefaults);
 //localStorage.removeItem('TODOS_V1', defaultTodos);
